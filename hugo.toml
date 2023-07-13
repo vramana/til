@@ -1,6 +1,6 @@
 baseURL = 'http://til.vramana.com/'
 languageCode = 'en-us'
-title = 'Ramana:TIL'
+title = 'Ramana: TIL'
 theme = 'smigle'
 
 [[main]]
@@ -53,13 +53,13 @@ url = "https://github.com/vramana"
 
 [[params.social]]
 name = "Personal Website"
-url = "https://vramana.com"
+url = "https://blog.vramana.com"
 
 [[params.social]]
 name = "Twitter"
 url = "https://twitter.com/_vramana"
 
-[[social]]
+[[params.social]]
 name = "Mastodon"
 url = "https://mastodon.social/@vramana"
 

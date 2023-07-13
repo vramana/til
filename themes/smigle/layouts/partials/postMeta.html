@@ -43,13 +43,4 @@
   </strong>
  {{ with .WordCount }}<span> • {{ . }} words</span>{{ end }}
  {{ with .ReadingTime}}<span> • {{ $duration }} minute read</span>{{ end }}
-  {{ with .Params.tags }}
-    <div>
-      <span>Tags:</span>
-      {{ range $key, $value := . }}
-        {{- if $key }}, {{ end }}
-        <a href="{{ "/tags/" | relLangURL }}{{ $value | urlize }}">{{ . }}</a>
-      {{- end }}
-    </div>
-  {{ end }}
 </div>
