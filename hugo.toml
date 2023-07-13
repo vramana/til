@@ -2,6 +2,7 @@ baseURL = 'http://til.vramana.com/'
 languageCode = 'en-us'
 title = 'Ramana: TIL'
 theme = 'smigle'
+publishDir = "docs"
 
 [[main]]
 identifier = "home"
