@@ -10,7 +10,7 @@ tags:
   - programming
   - chatgpt
 categories:
-  - languages
+  - bash
 ---
 
 I learnt how to concatenate an array of strings in bash using ChatGPT.

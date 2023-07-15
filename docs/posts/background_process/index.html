@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="description"
+    content=""
+  />
+  
+    
+      <title>Concurrent processes in bash | Ramana: TIL</title>
+    
+  
+  <link rel="stylesheet" href="/css/reset.css"/>
+  <link rel="stylesheet" href="/css/font.css"/>
+  <link rel="stylesheet" href="/css/smigle.css"/>
+  
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+</head>
+
+  <body>
+    <div id="root">
+      <header>
+  <div id="brand">
+    <div class="text">
+      <a href="http://til.vramana.com/"><h1>Ramana: TIL</h1></a>
+      <h3>Things I&#39;ve learned,
+        collected in <a href="https://github.com/vramana/til" style="color: var(--linkcolor)">vramana/til</a></h3>
+    </div>
+  </div>
+  <nav>
+    
+  </nav>
+  <hr />
+</header>
+
+      <div id="content">
+        
+  <main>
+    <article>
+      <h1 class="title">Concurrent processes in bash</h1>
+      
+      <div class="post-meta">
+  <strong>
+    <span>Posted on</span>
+    <time>2023-07-15</time>
+    <span>in</span>
+    
+      <a href="/categories/bash">bash</a>
+  </strong>
+  <span> • 159 words</span>
+  <span> • 1 minute read</span>
+  
+  
+    <div>
+      <span>Tags:</span>
+      
+        <a href="/tags/parallel">parallel</a>, 
+        <a href="/tags/bash">bash</a>, 
+        <a href="/tags/concurrency">concurrency</a>, 
+        <a href="/tags/programming">programming</a>, 
+        <a href="/tags/process">process</a>
+    </div>
+  
+</div>
+
+      <div class="content"><p>I learnt how to spawn background process in bash and wait for them to finish.</p>
+<p>Take the following script, we have to 2 process that slow and running sequentially.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>process1_fn<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>  echo <span style="color:#e6db74">&#34;Hello from process 1&#34;</span>;
+</span></span><span style="display:flex;"><span>  sleep 5;
+</span></span><span style="display:flex;"><span>  echo <span style="color:#e6db74">&#34;End of process 1&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>process2_fn<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>  echo <span style="color:#e6db74">&#34;Hello from process 1&#34;</span>;
+</span></span><span style="display:flex;"><span>  sleep 5;
+</span></span><span style="display:flex;"><span>  echo <span style="color:#e6db74">&#34;End of process 1&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>process1_fn
+</span></span><span style="display:flex;"><span>process2_fn
+</span></span></code></pre></div><p>How do we make them run concurrently? We can kick of each process independently using <code>&amp;</code> operator.
+We can use <code>wait</code> command to wait for all the process to end.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>process1_fn<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>  echo <span style="color:#e6db74">&#34;Hello from process 1&#34;</span>;
+</span></span><span style="display:flex;"><span>  sleep 5;
+</span></span><span style="display:flex;"><span>  echo <span style="color:#e6db74">&#34;End of process 1&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>process2_fn<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>  echo <span style="color:#e6db74">&#34;Hello from process 2&#34;</span>;
+</span></span><span style="display:flex;"><span>  sleep 5;
+</span></span><span style="display:flex;"><span>  echo <span style="color:#e6db74">&#34;End of process 2&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>process1_fn &amp;
+</span></span><span style="display:flex;"><span>process2_fn &amp;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>wait
+</span></span></code></pre></div><p><strong>Context</strong>: I ran into this problem while deploying multiple cloud functions in Google Cloud Build.
+Deploying each cloud function takes about 3 mins. So, I used this technique to reduce my deployment
+time.</p></div>
+    </article>
+  </main>
+
+      </div>
+      <footer>
+  <hr />
+  
+    <p id="social">
+      Find me around the web:
+      <br />
+      
+        
+        <a href="https://github.com/vramana">GitHub</a>
+      
+         | 
+        <a href="https://blog.vramana.com">Personal Website</a>
+      
+         | 
+        <a href="https://twitter.com/_vramana">Twitter</a>
+      
+         | 
+        <a href="https://mastodon.social/@vramana">Mastodon</a>
+      
+    </p>
+  
+  <p class="copyright">
+    Copyright © 2023
+    <a href="http://til.vramana.com/"><strong>Ramana Venkata</strong></a>.
+    This work is licensed under the
+    <a href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> license.
+  </p>
+  <p class="builtWith">
+    Built with
+    <a href="http://www.gohugo.io/">Hugo</a>,
+    using the theme
+    <a href="https://gitlab.com/ian-s-mcb/smigle-hugo-theme">smigle</a>,
+    which was influenced by the theme
+    <a href="https://github.com/sumnerevans/smol">smol</a>.
+  </p>
+</footer>
+
+    </div>
+  </body>
+</html>
