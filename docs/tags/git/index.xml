@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>git on Ramana: TIL</title>
+    <link>http://til.vramana.com/tags/git/</link>
+    <description>Recent content in git on Ramana: TIL</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 01 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://til.vramana.com/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Delete older git branches</title>
+      <link>http://til.vramana.com/posts/delete_old_branches/</link>
+      <pubDate>Tue, 01 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>http://til.vramana.com/posts/delete_old_branches/</guid>
+      <description>Every few months, I find myself finding the command to delete all my old branches. To the future me,
+for k in $(git branch | sed /\*/d); do if [ -z &amp;#34;$(git log -1 --since=&amp;#39;1 week ago&amp;#39; -s $k)&amp;#34; ]; then git branch -D $k fi done </description>
+    </item>
+    
+  </channel>
+</rss>

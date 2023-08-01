@@ -9,7 +9,7 @@
   />
   
     
-      <title>Posts | Ramana: TIL</title>
+      <title>Delete older git branches | Ramana: TIL</title>
     
   
   <link rel="stylesheet" href="/css/reset.css"/>
@@ -43,42 +43,39 @@
 
       <div id="content">
         
-  <main id="archive">
-    <h1>Posts</h1>
+  <main>
+    <article>
+      <h1 class="title">Delete older git branches</h1>
+      
+      <div class="post-meta">
+  <strong>
+    <span>Posted on</span>
+    <time>2023-08-01</time>
+    <span>in</span>
     
-  <h3>2023</h3>
-  <ul id="postsByDate">
-    
-      <li>
-        <div class="date">
-          Aug 1
-        </div>
-        <div class="title">
-          <a href="/posts/delete_old_branches/">Delete older git branches</a>
-        </div>
-      </li>
-    
-      <li>
-        <div class="date">
-          Jul 15
-        </div>
-        <div class="title">
-          <a href="/posts/background_process/">Concurrent processes in bash</a>
-        </div>
-      </li>
-    
-      <li>
-        <div class="date">
-          Jul 13
-        </div>
-        <div class="title">
-          <a href="/posts/ifs_bash/">Concatenate comma separated strings in bash</a>
-        </div>
-      </li>
-    
-  </ul>
+      <a href="/categories/git">git</a>
+  </strong>
+  <span> • 47 words</span>
+  <span> • 1 minute read</span>
+  
+  
+    <div>
+      <span>Tags:</span>
+      
+        <a href="/tags/bash">bash</a>, 
+        <a href="/tags/git">git</a>
+    </div>
+  
+</div>
 
-
+      <div class="content"><p>Every few months, I find myself finding the command to delete all my old branches. To the future me,</p>
+<pre tabindex="0"><code>for k in $(git branch | sed /\*/d); do
+  if [ -z &#34;$(git log -1 --since=&#39;1 week ago&#39; -s $k)&#34; ]; then
+    git branch -D $k
+  fi
+done
+</code></pre></div>
+    </article>
   </main>
 
       </div>
