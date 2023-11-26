@@ -37,10 +37,12 @@ weight = 5
 
 [params]
 abbrDateFmt = "Jan 2"
-author = "Ramana Venkata"
 subtitle = "Things I've learned"
 brandIconFile = ""
 dateFmt = "2006-01-02"
+
+[params.author]
+name = "Ramana Venkata"
 
 # Options for overriding theme or page defaults
 #customStylesheets = ["css/custom.css"]

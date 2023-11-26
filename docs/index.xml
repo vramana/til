@@ -6,34 +6,35 @@
     <description>Recent content on Ramana: TIL</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 01 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://til.vramana.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 27 Nov 2023 00:42:43 +0530</lastBuildDate>
+    <atom:link href="http://til.vramana.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Upgrading Postgres</title>
+      <link>http://til.vramana.com/posts/upgrading-postgres/</link>
+      <pubDate>Mon, 27 Nov 2023 00:42:43 +0530</pubDate>
+      <guid>http://til.vramana.com/posts/upgrading-postgres/</guid>
+      <description>&lt;p&gt;Today I have upgraded a postgres instance from version 12 to version 16 on AWS Lightsail Machine.  Here is a list of steps I have followed.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Delete older git branches</title>
       <link>http://til.vramana.com/posts/delete_old_branches/</link>
       <pubDate>Tue, 01 Aug 2023 00:00:00 +0000</pubDate>
-      
       <guid>http://til.vramana.com/posts/delete_old_branches/</guid>
-      <description>Every few months, I find myself finding the command to delete all my old branches. To the future me,
-for k in $(git branch | sed /\*/d); do if [ -z &amp;#34;$(git log -1 --since=&amp;#39;1 week ago&amp;#39; -s $k)&amp;#34; ]; then git branch -D $k fi done </description>
+      <description>&lt;p&gt;Every few months, I find myself finding the command to delete all my old branches. To the future me,&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Concurrent processes in bash</title>
       <link>http://til.vramana.com/posts/background_process/</link>
       <pubDate>Sat, 15 Jul 2023 00:00:00 +0000</pubDate>
-      
       <guid>http://til.vramana.com/posts/background_process/</guid>
       <description>&lt;p&gt;I learnt how to spawn background process in bash and wait for them to finish.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Concatenate comma separated strings in bash</title>
       <link>http://til.vramana.com/posts/ifs_bash/</link>
       <pubDate>Thu, 13 Jul 2023 00:00:00 +0000</pubDate>
-      
       <guid>http://til.vramana.com/posts/ifs_bash/</guid>
       <description>&lt;p&gt;I learnt how to concatenate an array of strings in bash using ChatGPT.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

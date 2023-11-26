@@ -6,24 +6,21 @@
     <description>Recent content in bash on Ramana: TIL</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 15 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://til.vramana.com/categories/bash/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 15 Jul 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://til.vramana.com/categories/bash/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Concurrent processes in bash</title>
       <link>http://til.vramana.com/posts/background_process/</link>
       <pubDate>Sat, 15 Jul 2023 00:00:00 +0000</pubDate>
-      
       <guid>http://til.vramana.com/posts/background_process/</guid>
       <description>&lt;p&gt;I learnt how to spawn background process in bash and wait for them to finish.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Concatenate comma separated strings in bash</title>
       <link>http://til.vramana.com/posts/ifs_bash/</link>
       <pubDate>Thu, 13 Jul 2023 00:00:00 +0000</pubDate>
-      
       <guid>http://til.vramana.com/posts/ifs_bash/</guid>
       <description>&lt;p&gt;I learnt how to concatenate an array of strings in bash using ChatGPT.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

@@ -6,87 +6,70 @@
     <description>Recent content in Tags on Ramana: TIL</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 01 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://til.vramana.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 01 Aug 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://til.vramana.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>bash</title>
       <link>http://til.vramana.com/tags/bash/</link>
       <pubDate>Tue, 01 Aug 2023 00:00:00 +0000</pubDate>
-      
       <guid>http://til.vramana.com/tags/bash/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>git</title>
       <link>http://til.vramana.com/tags/git/</link>
       <pubDate>Tue, 01 Aug 2023 00:00:00 +0000</pubDate>
-      
       <guid>http://til.vramana.com/tags/git/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>concurrency</title>
       <link>http://til.vramana.com/tags/concurrency/</link>
       <pubDate>Sat, 15 Jul 2023 00:00:00 +0000</pubDate>
-      
       <guid>http://til.vramana.com/tags/concurrency/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>parallel</title>
       <link>http://til.vramana.com/tags/parallel/</link>
       <pubDate>Sat, 15 Jul 2023 00:00:00 +0000</pubDate>
-      
       <guid>http://til.vramana.com/tags/parallel/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>process</title>
       <link>http://til.vramana.com/tags/process/</link>
       <pubDate>Sat, 15 Jul 2023 00:00:00 +0000</pubDate>
-      
       <guid>http://til.vramana.com/tags/process/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>programming</title>
       <link>http://til.vramana.com/tags/programming/</link>
       <pubDate>Sat, 15 Jul 2023 00:00:00 +0000</pubDate>
-      
       <guid>http://til.vramana.com/tags/programming/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>arrays</title>
       <link>http://til.vramana.com/tags/arrays/</link>
       <pubDate>Thu, 13 Jul 2023 00:00:00 +0000</pubDate>
-      
       <guid>http://til.vramana.com/tags/arrays/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>chatgpt</title>
       <link>http://til.vramana.com/tags/chatgpt/</link>
       <pubDate>Thu, 13 Jul 2023 00:00:00 +0000</pubDate>
-      
       <guid>http://til.vramana.com/tags/chatgpt/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>string</title>
       <link>http://til.vramana.com/tags/string/</link>
       <pubDate>Thu, 13 Jul 2023 00:00:00 +0000</pubDate>
-      
       <guid>http://til.vramana.com/tags/string/</guid>
       <description></description>
     </item>
-    
   </channel>
 </rss>
