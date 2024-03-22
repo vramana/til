@@ -6,7 +6,7 @@ draft: false
 
 A short guide on how to setup mosh on Lightsail or Hetzner server
 
-<!-- more -->
+<!--more-->
 
 - Install mosh package on the server `sudo apt install mosh`
 - Run `locale-gen en_US.UTF-8 && update-locale LC_ALL="en_US.UTF-8"`
