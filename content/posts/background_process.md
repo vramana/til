@@ -13,11 +13,9 @@ categories:
   - bash
 ---
 
-
-I learnt how to spawn background process in bash and wait for them to finish.
+I learned how to spawn background process in bash and wait for them to finish.
 
 <!--more-->
-
 
 Take the following script, we have to 2 process that slow and running sequentially.
 
