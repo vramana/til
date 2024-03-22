@@ -2,17 +2,19 @@
   <div id="brand">
     <div class="text">
       <a href="{{ .Site.BaseURL }}"><h1>{{ .Site.Title }}</h1></a>
-      <h3>{{ default "Description about Blog Author" .Site.Params.subtitle }},
-        collected in <a href="https://github.com/vramana/til" style="color: var(--linkcolor)">vramana/til</a></h3>
+      <h4>
+        Collected in
+        <a href="https://github.com/vramana/til" style="color: var(--linkcolor)"
+          >vramana/til</a
+        >
+      </h4>
     </div>
   </div>
   <nav>
-    {{ with .Site.Menus.main }}
-      {{ range $index, $value := . }}
-        {{ if $index }} | {{ end }}
-        <a href="{{ .URL | relURL }}"><b>{{ .Name }}</b></a>
-      {{ end }}
-    {{ end }}
+    {{ with .Site.Menus.main }} {{ range $index, $value := . }} {{ if $index }}
+    | {{ end }}
+    <a href="{{ .URL | relURL }}"><b>{{ .Name }}</b></a>
+    {{ end }} {{ end }}
   </nav>
   <hr />
 </header>

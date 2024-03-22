@@ -1,6 +1,6 @@
 baseURL = 'http://til.vramana.com/'
 languageCode = 'en-us'
-title = 'Ramana: TIL'
+title = "Things I've learned"
 theme = 'smigle'
 publishDir = "docs"
 
@@ -37,7 +37,7 @@ weight = 5
 
 [params]
 abbrDateFmt = "Jan 2"
-subtitle = "Things I've learned"
+subtitle = ""
 brandIconFile = ""
 dateFmt = "2006-01-02"
 

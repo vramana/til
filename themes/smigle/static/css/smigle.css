@@ -14,7 +14,8 @@
   color: var(--fontcolor);
   text-decoration: none;
 }
-#brand h1, #brand h3 {
+#brand h1,
+#brand h3 {
   margin: 0;
 }
 #brand h1 {
@@ -53,6 +54,9 @@ div.post-meta {
     flex-direction: row;
     text-align: unset;
   }
+  #brand .text {
+    margin-left: 10px;
+  }
   #brand h1 {
     font-size: 45px;
   }
@@ -60,13 +64,14 @@ div.post-meta {
     font-size: 25px;
   }
 }
-#postsByDate  {
+#postsByDate {
   list-style: none;
 }
 #postsByDate .date {
   width: 60px;
 }
-#postsByDate div, #postsInOneGroup div {
+#postsByDate div,
+#postsInOneGroup div {
   display: inline-block;
 }
 #terms {
